@@ -7,6 +7,6 @@ COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm install --production --silent && mv node_modules ./
 COPY . .
 # RUN npm test 
-EXPOSE 3002
+EXPOSE 3003
 USER node
-CMD ["npm", "start"]
+CMD ["node", "index"]
